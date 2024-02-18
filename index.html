@@ -17,9 +17,11 @@
 </head>
 <body>
 
-  <!-- Rating state start -->
+  <!----------->
+  <!----------- Rating state start ----------->
+  <!----------->
 
-  <main>
+  <main class="rating">
 
     <div class="circle-container">
       <img src="./CSS/images/icon-star.svg" alt="Star-Icon" class="star-icon">
@@ -30,34 +32,42 @@
     <p>Please let us know how we did with your support request. All feedback is appreciated 
     to help us improve our offering!</p>
 
-    <div class="rate-container">
+    <form id="rating">
+      
+      <fieldset>
 
-      <button>1</button>
-      
-      <button>2</button>
-      
-      <button>3</button>
-      
-      <button>4</button>
-      
-      <button>5</button>
+        <input type="radio" id="1" name="rads" value="1">
+        <label for="1">1</label>
+        <input type="radio" id="2" name="rads" value="2">
+        <label for="2">2</label>
+        <input type="radio" id="3" name="rads" value="3">
+        <label for="3">3</label>
+        <input type="radio" id="4" name="rads" value="4">
+        <label for="4">4</label>
+        <input type="radio" id="5" name="rads" value="5">
+        <label for="5">5</label>
 
-    </div>
-    
-    
-    <button>Submit</button>
+      </fieldset>
+
+      <button>Submit</button>
+
+    </form>
 
   </main>
 
-  <!-- Rating state end -->
+  <!----------->
+  <!----------- Rating state end ----------->
+  <!----------->
 
-  <!-- Thank you state start -->
+  <!----------->
+  <!----------- Thank you state start ----------->
+  <!----------->
 
-  <main class="thank-you-container">
+  <main class="thank-you">
 
     <img src="./CSS/images/illustration-thank-you.svg" alt="Thank you illustration">
 
-    <div class="label">
+    <div class="rating-score">
       <p>You selected <!-- Add rating here --> out of 5</h2>
     </div>
 
@@ -67,9 +77,10 @@
     don’t hesitate to get in touch!</p>
 
   </main>
-  <!-- Thank you state end -->
 
-
+  <!----------->
+  <!----------- Thank you state end ----------->
+  <!----------->
 
 </body>
 </html>

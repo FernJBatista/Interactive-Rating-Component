@@ -132,6 +132,13 @@ p {
 		border: 0;
 		line-height: 0;
 		object-fit: contain;
+		cursor: pointer;
+		transition: 0.4s;
+	}
+
+	button:hover {
+		background-color: var(--Orange);
+		color: var(--White);
 	}
 }
 
@@ -146,9 +153,16 @@ button {
 	padding: 1rem;
 	letter-spacing: 0.2rem;
 	border: 0;
+	cursor: pointer;
+	transition: 0.4s;
 }
 
-.thank-you-container {
+button:hover {
+	background-color: var(--White);
+	color: var(--Orange);
+}
+
+.thank-you {
 	display: none;
 	justify-content: center;
 	align-items: center;
@@ -174,5 +188,48 @@ h2 {
 	p {
 		color: var(--Orange);
 		font-weight: 300;
+	}
+}
+
+fieldset {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	margin-bottom: 2rem;
+
+	input {
+		display: none;
+	  }
+	  
+	  label {
+		cursor: pointer;
+		margin: 10px 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	  }
+	  
+	  label:before {
+		content: '';
+		display: inline-block;
+		height: 3rem;
+		width: 3rem;
+		background: var(--Dark-Blue);
+		border-radius: 50%;
+		z-index: 2;
+	  }
+
+	  input:checked + label:before {
+		background-color: var(--Orange);
+	  }
+}
+
+form {
+
+
+	button {
+		min-width: 100%;
 	}
 }
