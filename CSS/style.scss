@@ -179,55 +179,46 @@ h2 {
 	color: var(--White);
 }
 
-.label {
-	background-color: var(--Dark-Blue);
-	width: max-content;
-	padding: 0.5rem 1rem;
-	border-radius: 9999px;
-
-	p {
-		color: var(--Orange);
-		font-weight: 300;
-	}
-}
-
 fieldset {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	position: relative;
 	margin-bottom: 2rem;
 
-	input {
+	input[type=radio] {
 		display: none;
 	  }
 	  
 	  label {
+		display: inline-block;
 		cursor: pointer;
-		margin: 10px 10px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		position: relative;
 	  }
 	  
 	  label:before {
-		content: '';
-		display: inline-block;
-		height: 3rem;
+		content: attr(data-number);
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		width: 3rem;
-		background: var(--Dark-Blue);
+		height: 3rem;
+		font-size: 1rem;
+		color: var(--Medium-Grey);
 		border-radius: 50%;
-		z-index: 2;
+		position: absolute;
+		background: var(--Dark-Blue);
+		transform: translate(-50%, -50%); /* Center the pseudo-element */
 	  }
 
-	  input:checked + label:before {
+	  input[type="radio"]:checked + label:before {
 		background-color: var(--Orange);
-	  }
+		color: var(--Very-Dark-Blue)white;
+		}
 }
 
 form {
-
+	
 
 	button {
 		min-width: 100%;
