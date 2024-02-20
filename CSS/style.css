@@ -204,14 +204,12 @@ fieldset label:before {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 3rem;
-  height: 3rem;
+  width: 3.5rem;
+  height: 3.5rem;
   font-size: 1rem;
   color: var(--Medium-Grey);
   border-radius: 50%;
-  position: absolute;
   background: var(--Dark-Blue);
-  transform: translate(-50%, -50%); /* Center the pseudo-element */
 }
 fieldset input[type=radio]:checked + label:before {
   background-color: var(--Orange);
