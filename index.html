@@ -1,91 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./CSS/images/favicon-32x32.png">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./CSS/images/favicon-32x32.png" />
 
-<link rel="stylesheet" href="./CSS/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet" />
 
-  <title>Frontend Mentor | Interactive rating component</title>
+        <link rel="stylesheet" href="./CSS/style.css" />
 
-</head>
-<body>
+        <title>Frontend Mentor | Interactive rating component</title>
+    </head>
+    <body>
+        <!----------->
+        <!----------- Rating state start ----------->
+        <!----------->
 
-  <!----------->
-  <!----------- Rating state start ----------->
-  <!----------->
+        <main class="rating">
+            <div class="circle-container">
+                <img
+                    src="./CSS/images/icon-star.svg"
+                    alt="Star-Icon"
+                    class="star-icon" />
+            </div>
 
-  <main class="rating">
+            <h1>How did we do?</h1>
 
-    <div class="circle-container">
-      <img src="./CSS/images/icon-star.svg" alt="Star-Icon" class="star-icon">
-    </div>
-      
-    <h1>How did we do?</h1>
+            <p>
+                Please let us know how we did with your support request. All
+                feedback is appreciated to help us improve our offering!
+            </p>
 
-    <p>Please let us know how we did with your support request. All feedback is appreciated 
-    to help us improve our offering!</p>
+            <form id="ratingForm">
+                <fieldset>
+                    <input type="radio" id="1" name="rads" value="1" />
+                    <label for="1" data-number="1"></label>
 
-    <form id="rating">
-      
-      <fieldset>
+                    <input type="radio" id="2" name="rads" value="2" />
+                    <label for="2" data-number="2"></label>
 
-        <input type="radio" id="1" name="rads" value="1">
-        <label for="1" data-number="1"></label>
+                    <input type="radio" id="3" name="rads" value="3" />
+                    <label for="3" data-number="3"></label>
 
-        <input type="radio" id="2" name="rads" value="2">
-        <label for="2" data-number="2"></label>
+                    <input type="radio" id="4" name="rads" value="4" />
+                    <label for="4" data-number="4"></label>
 
-        <input type="radio" id="3" name="rads" value="3">
-        <label for="3" data-number="3"></label>
+                    <input type="radio" id="5" name="rads" value="5" />
+                    <label for="5" data-number="5"></label>
+                </fieldset>
 
-        <input type="radio" id="4" name="rads" value="4">
-        <label for="4" data-number="4"></label>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </main>
 
-        <input type="radio" id="5" name="rads" value="5">
-        <label for="5" data-number="5"></label>
+        <!----------->
+        <!----------- Rating state end ----------->
+        <!----------->
 
-      </fieldset>
+        <!----------->
+        <!----------- Thank you state start ----------->
+        <!----------->
 
-      <button>Submit</button>
+        <main class="thank-you">
+            <img
+                src="./CSS/images/illustration-thank-you.svg"
+                alt="Thank you illustration" />
 
-    </form>
+            <div class="rating-score">
+                <p class="rating">
+                    You selected <span id="selectedRating"></span> out of 5
+                </p>
+            </div>
 
-  </main>
+            <h2>Thank you!</h2>
 
-  <!----------->
-  <!----------- Rating state end ----------->
-  <!----------->
+            <p>
+                We appreciate you taking the time to give a rating. If you ever
+                need more support, don’t hesitate to get in touch!
+            </p>
+        </main>
 
-  <!----------->
-  <!----------- Thank you state start ----------->
-  <!----------->
+        <!----------->
+        <!----------- Thank you state end ----------->
+        <!----------->
 
-  <main class="thank-you">
-
-    <img src="./CSS/images/illustration-thank-you.svg" alt="Thank you illustration">
-
-    <div class="rating-score">
-      <p>You selected <!-- Add rating here --> out of 5</h2>
-    </div>
-
-    <h2>Thank you!</h2>
-
-    <p>We appreciate you taking the time to give a rating. If you ever need more support, 
-    don’t hesitate to get in touch!</p>
-
-  </main>
-
-  <!----------->
-  <!----------- Thank you state end ----------->
-  <!----------->
-
-  <script src="index.js"></script>
-</body>
+        <script src="index.js"></script>
+    </body>
 </html>
